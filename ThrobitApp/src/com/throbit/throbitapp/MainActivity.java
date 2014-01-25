@@ -7,7 +7,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
-
+	private String[] listData = new String[]{"Post 1", "Post 2", "Post 3", "Post 4", "Post 5", "Post 6"};
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -15,7 +17,7 @@ public class MainActivity extends Activity {
 		
 		ListView listView = (ListView)this.findViewById(R.id.postListView);
 		
-		ArrayAdapter<String> itemAdapter =  new ArrayAdapter<String>(this, , textViewResourceId)
+		ArrayAdapter<String> itemAdapter =  new ArrayAdapter<String>(this, R.layout.listitem, listData);
 	}
 
 	@Override
