@@ -33,6 +33,10 @@ public class MainActivity extends Activity {
 		itemAdapter = new ListItemAdapter(this, R.layout.listitem, listData);
 		Log.d("dg", Integer.toString(listData.size()));
 		listview.setAdapter(itemAdapter);
+		
+		listview.setOnClickListener(new OnClickListener()
+		
+		);
 	}
 
 	@Override
