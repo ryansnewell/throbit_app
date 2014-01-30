@@ -42,6 +42,13 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	public void setNewFeed(String url){
+		for(int i = 0; i < listData.size(); i++){
+			listData.remove(i);
+		}
+		new RssFeedHandler().execute(url);
+	}
+	
 	public enum RSSXMLTag {
 		TITLE,DATE,LINK,CONTENT,GUID,IGNORETAG;
 	}
